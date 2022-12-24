@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Actividad de aprendizaje Unidad 2</string>
+    <string name="titulo"></string>
+    <string name="btnEj1">Ejercicio 1</string>
+    <string name="btnEj2">Ejercicio 2</string>
+    <string name="btnEj3">Ejercicio 3</string>
+    <string name="btnEj4">Ejercicio 4</string>
+    <string name="btnEj5">Ejercicio 5</string>
+    <string name="TituloEjercicios">Ejercicios</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragEj1_input_placeholder">Ingrese el número a calcular</string>
+    <string name="btnCalcular">Calcular</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bienvendidos</string>
+</resources>
