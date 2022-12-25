@@ -26,7 +26,18 @@
             android:layout_height="wrap_content"
             android:text="@string/ejDescription"
             android:justificationMode="inter_word"
-            android:layout_margin="25dp"/>
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/resultadoEj1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="10dp"
+            android:text="@string/resultadoEj1"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/n"
@@ -49,16 +60,6 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/btnCalcular" />
 
-        <TextView
-            android:id="@+id/resultadoEj1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-
-            android:layout_marginTop="10dp"
-            android:text="@string/resultadoEj1"
-            android:textSize="30sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
 </FrameLayout>

@@ -9,12 +9,13 @@ import android.view.View;
 
 import com.udc.aau2.ejercicios.Ej1;
 import com.udc.aau2.ui.fragments.Ej1Fragment;
+import com.udc.aau2.ui.fragments.Ej2Fragment;
 import com.udc.aau2.ui.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     FragmentTransaction transaction;
-    Fragment homeFragment, ejercicio1Frag;
+    Fragment homeFragment, ej1Fragment, ej2Fragment;
     Ej1 ej1;
 
     @Override
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         homeFragment = new HomeFragment();
-        ejercicio1Frag = new Ej1Fragment();
+        ej1Fragment = new Ej1Fragment();
+        ej2Fragment = new Ej2Fragment();
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, homeFragment).commit();
     }
@@ -32,11 +34,10 @@ public class MainActivity extends AppCompatActivity {
         transaction = getSupportFragmentManager().beginTransaction();
 
         switch (view.getId()){
-            case R.id.btnEj1: transaction.replace(R.id.fragmentFrame, ejercicio1Frag).commit();
+            case R.id.btnEj1: transaction.replace(R.id.fragmentFrame, ej1Fragment).commit();
 
                 break;
-            case R.id.btnCalcular:
-                System.out.println("ENTRO");;
+            case R.id.btnEj2: transaction.replace(R.id.fragmentFrame, ej2Fragment).commit();
                 break;
         }
     }
