@@ -23,4 +23,14 @@ opciones para imprimir: Normal o Al Reves</string>
     <string name="fragEj3_input_placeholder">Ingrese la cadena a transformar</string>
     <string name="btnNormal">Normal</string>
     <string name="btnAlreves">Al revés</string>
+    <string name="ej4Title">Ejercicio 4</string>
+    <string name="ej4Description">4. Desarrollar una Apps en Android que Digitado 5 Compras, Realice los siguientes Cálculos:
+ El total de la compra
+ El IVA de la compra
+ Si la compra es superior a 100.000 realizar un descuento del 10%
+ Calcule cual es la compra más alta
+ Utilizar ScrollView Vertical, para desplazar verticalmente la pantalla</string>
+    <string name="fragEj4_input_placeholder">Ingrese valor de la compra</string>
+    <string name="btnAgregarCompra">Agregar compra</string>
+    <string name="titleTableCompra">Compras</string>
 </resources>

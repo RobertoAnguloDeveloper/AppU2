@@ -57,22 +57,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnCadenaReves"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/btnAlreves" />
+                android:text="@string/btnAlreves"
+                android:layout_margin="10dp"/>
 
             <Button
                 android:id="@+id/btnCadenaNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/btnNormal" />
+                android:text="@string/btnNormal"
+                android:layout_margin="10dp"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentTransaction transaction;
     Fragment homeFragment, ej1Fragment, ej2Fragment, ej3Fragment;
-    Ej1 ej1;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ej1Fragment = new Ej1Fragment();
         ej2Fragment = new Ej2Fragment();
         ej3Fragment = new Ej3Fragment();
+        intent = new Intent(this, Ej4Activity.class);
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, homeFragment).commit();
     }
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btnEj3: transaction.replace(R.id.fragmentFrame, ej3Fragment).commit();
+                break;
+
+            case R.id.btnEj4: startActivity(intent);
                 break;
         }
     }
