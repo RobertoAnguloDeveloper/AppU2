@@ -8,9 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.udc.aau2.R;
+import com.udc.aau2.ejercicios.Ej1;
+import com.udc.aau2.ejercicios.Ej2;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +22,9 @@ import com.udc.aau2.R;
  * create an instance of this fragment.
  */
 public class Ej2Fragment extends Fragment {
-    ImageView imageView;
+    ImageView imageView1, imageView2;
+    Button btnTirarDados;
+    Ej2 ej2;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,22 +70,40 @@ public class Ej2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ej2, container, false);
-        imageView = view.findViewById(R.id.dice);
-
-        AnimationDrawable animationDrawable = new AnimationDrawable();
+        imageView1 = view.findViewById(R.id.dice1);
+        imageView2 = view.findViewById(R.id.dice2);
+        btnTirarDados = view.findViewById(R.id.btnTirarDados);
 
         int [] dices = {R.drawable.d1, R.drawable.d2, R.drawable.d3
                 , R.drawable.d4, R.drawable.d5, R.drawable.d6};
 
-        animationDrawable.addFrame(getResources().getDrawable(dices[0]), 500);
-        animationDrawable.addFrame(getResources().getDrawable(dices[1]), 500);
-        animationDrawable.addFrame(getResources().getDrawable(dices[2]), 500);
-        animationDrawable.addFrame(getResources().getDrawable(dices[3]), 500);
-        animationDrawable.addFrame(getResources().getDrawable(dices[4]), 500);
-        animationDrawable.addFrame(getResources().getDrawable(dices[5]), 500);
+        AnimationDrawable animationDrawable1 = new AnimationDrawable();
+        AnimationDrawable animationDrawable2 = new AnimationDrawable();
 
-        imageView.setImageDrawable(animationDrawable);
-        animationDrawable.start();
+        btnTirarDados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ej2 =  new Ej2();
+
+                if(animationDrawable1.isRunning()){
+                    animationDrawable1.stop();
+                    animationDrawable2.stop();
+                }else{
+                    for (int i = 0; i < dices.length; i++) {
+                        animationDrawable1.addFrame(getResources().getDrawable(dices[i]), ej2.randomTime());
+                    }
+
+                    for (int i = 0; i < dices.length; i++) {
+                        animationDrawable2.addFrame(getResources().getDrawable(dices[i]), ej2.randomTime());
+                    }
+
+                    imageView1.setImageDrawable(animationDrawable1);
+                    animationDrawable1.start();
+                    imageView2.setImageDrawable(animationDrawable2);
+                    animationDrawable2.start();
+                }
+            }
+        });
         return view;
     }
 }

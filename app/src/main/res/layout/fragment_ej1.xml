@@ -25,8 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ejDescription"
-            android:justificationMode="inter_word"
-            android:layout_marginTop="15dp"/>
+            android:gravity="center_horizontal"
+            android:layout_margin="25dp"/>
 
         <TextView
             android:id="@+id/resultadoEj1"

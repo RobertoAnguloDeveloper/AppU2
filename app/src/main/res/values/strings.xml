@@ -15,4 +15,6 @@
     <string name="resultadoEj1">Resultado</string>
     <string name="ej1Title">Ejercicio 1</string>
     <string name="ejDescription">1. Desarrollar una Apps en Android que Calcule el Cubo de un Numero, si el número es mayor de 100, la aplicación mostrar un mensaje con Toast “Eres muy afortunado”</string>
+    <string name="ej2Title">Ejercicio 2</string>
+    <string name="ej2Description">2. Desarrollar una Aplicación en Android Que simule la tirada de Dos dados</string>
 </resources>
