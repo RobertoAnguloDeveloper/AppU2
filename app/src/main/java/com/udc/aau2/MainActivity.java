@@ -10,12 +10,13 @@ import android.view.View;
 import com.udc.aau2.ejercicios.Ej1;
 import com.udc.aau2.ui.fragments.Ej1Fragment;
 import com.udc.aau2.ui.fragments.Ej2Fragment;
+import com.udc.aau2.ui.fragments.Ej3Fragment;
 import com.udc.aau2.ui.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     FragmentTransaction transaction;
-    Fragment homeFragment, ej1Fragment, ej2Fragment;
+    Fragment homeFragment, ej1Fragment, ej2Fragment, ej3Fragment;
     Ej1 ej1;
 
     @Override
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
         ej1Fragment = new Ej1Fragment();
         ej2Fragment = new Ej2Fragment();
+        ej3Fragment = new Ej3Fragment();
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, homeFragment).commit();
     }
@@ -35,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.btnEj1: transaction.replace(R.id.fragmentFrame, ej1Fragment).commit();
-
                 break;
+
             case R.id.btnEj2: transaction.replace(R.id.fragmentFrame, ej2Fragment).commit();
+                break;
+
+            case R.id.btnEj3: transaction.replace(R.id.fragmentFrame, ej3Fragment).commit();
                 break;
         }
     }

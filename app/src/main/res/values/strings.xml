@@ -17,4 +17,9 @@
     <string name="ejDescription">1. Desarrollar una Apps en Android que Calcule el Cubo de un Numero, si el número es mayor de 100, la aplicación mostrar un mensaje con Toast “Eres muy afortunado”</string>
     <string name="ej2Title">Ejercicio 2</string>
     <string name="ej2Description">2. Desarrollar una Aplicación en Android Que simule la tirada de Dos dados</string>
+    <string name="ej3Title">Ejercicio 3</string>
+    <string name="ej3Description">3. Desarrollar una Aplicación en Android que digitado una cadena de caracteres, tiene dos
+opciones para imprimir: Normal o Al Reves</string>
+    <string name="fragEj3_input_placeholder">Ingrese la cadena a transformar</string>
+    <string name="btnTransformar">Transformar</string>
 </resources>
