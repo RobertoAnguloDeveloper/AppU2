@@ -21,5 +21,6 @@
     <string name="ej3Description">3. Desarrollar una Aplicación en Android que digitado una cadena de caracteres, tiene dos
 opciones para imprimir: Normal o Al Reves</string>
     <string name="fragEj3_input_placeholder">Ingrese la cadena a transformar</string>
-    <string name="btnTransformar">Transformar</string>
+    <string name="btnNormal">Normal</string>
+    <string name="btnAlreves">Al revés</string>
 </resources>

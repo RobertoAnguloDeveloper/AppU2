@@ -20,7 +20,7 @@ import com.udc.aau2.ejercicios.Ej3;
  * create an instance of this fragment.
  */
 public class Ej3Fragment extends Fragment {
-    Button btnCalcular;
+    Button btnNormal, btnAlreves;
     EditText cadena;
     TextView resultado;
     Ej3 ej3;
@@ -71,7 +71,26 @@ public class Ej3Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ej3, container, false);
 
+        cadena = view.findViewById(R.id.cadenaEj3);
+        resultado = view.findViewById(R.id.resultadoEj3);
+        btnNormal = view.findViewById(R.id.btnCadenaNormal);
+        btnAlreves = view.findViewById(R.id.btnCadenaReves);
 
+        btnNormal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resultado.setText(cadena.getText());
+            }
+        });
+
+        btnAlreves.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String string = String.valueOf(cadena.getText());
+                StringBuffer stringBuffer = new StringBuffer(string);
+                resultado.setText(stringBuffer.reverse());
+            }
+        });
         return view;
     }
 }
