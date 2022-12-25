@@ -20,7 +20,7 @@ public class Ej2 {
     public Integer randomTime(){
         int random = 0;
 
-        random = this.randomNumber.nextInt(100)+200;
+        random = this.randomNumber.nextInt(100)+100;
 
         return random;
     }

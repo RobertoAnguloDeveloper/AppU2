@@ -90,11 +90,8 @@ public class Ej2Fragment extends Fragment {
                     animationDrawable2.stop();
                 }else{
                     for (int i = 0; i < dices.length; i++) {
-                        animationDrawable1.addFrame(getResources().getDrawable(dices[i]), ej2.randomTime());
-                    }
-
-                    for (int i = 0; i < dices.length; i++) {
-                        animationDrawable2.addFrame(getResources().getDrawable(dices[i]), ej2.randomTime());
+                        animationDrawable1.addFrame(getResources().getDrawable(dices[ej2.randomId(dices)]), ej2.randomTime());
+                        animationDrawable2.addFrame(getResources().getDrawable(dices[ej2.randomId(dices)]), ej2.randomTime());
                     }
 
                     imageView1.setImageDrawable(animationDrawable1);
