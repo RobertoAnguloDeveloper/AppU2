@@ -11,5 +11,8 @@
     <string name="fragEj1_input_placeholder">Ingrese el número a calcular</string>
     <string name="btnCalcular">Calcular</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Bienvendidos</string>
+    <string name="hello_blank_fragment">Bienvendido</string>
+    <string name="resultadoEj1">Resultado</string>
+    <string name="ej1Title">Ejercicio 1</string>
+    <string name="ejDescription">1. Desarrollar una Apps en Android que Calcule el Cubo de un Numero, si el número es mayor de 100, la aplicación mostrar un mensaje con Toast “Eres muy afortunado”</string>
 </resources>

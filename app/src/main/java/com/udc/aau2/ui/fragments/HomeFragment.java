@@ -1,4 +1,4 @@
-package com.udc.aau2.ui.Home;
+package com.udc.aau2.ui.fragments;
 
 import android.os.Bundle;
 
@@ -16,7 +16,6 @@ import com.udc.aau2.R;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -63,4 +62,6 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+
+
 }
