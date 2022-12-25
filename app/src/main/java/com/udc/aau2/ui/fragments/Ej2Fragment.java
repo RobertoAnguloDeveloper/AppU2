@@ -67,8 +67,10 @@ public class Ej2Fragment extends Fragment {
         imageView = view.findViewById(R.id.dice);
 
         AnimationDrawable animationDrawable = new AnimationDrawable();
+
         int [] dices = {R.drawable.d1, R.drawable.d2, R.drawable.d3
                 , R.drawable.d4, R.drawable.d5, R.drawable.d6};
+
         animationDrawable.addFrame(getResources().getDrawable(dices[0]), 500);
         animationDrawable.addFrame(getResources().getDrawable(dices[1]), 500);
         animationDrawable.addFrame(getResources().getDrawable(dices[2]), 500);
