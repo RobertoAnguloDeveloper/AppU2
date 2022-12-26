@@ -87,7 +87,7 @@ public class Ej1Fragment extends Fragment {
                 String respuesta = ej1.eresAfortunado(result);
 
                 if(!respuesta.isEmpty()){
-                    Toast.makeText(getContext(),respuesta, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),respuesta, Toast.LENGTH_LONG).show();
                 }
             }
         });

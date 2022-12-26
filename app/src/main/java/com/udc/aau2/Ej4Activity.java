@@ -3,6 +3,7 @@ package com.udc.aau2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.udc.aau2.ejercicios.Compra;
 import com.udc.aau2.ejercicios.Ej4;
@@ -62,7 +64,73 @@ public class Ej4Activity extends AppCompatActivity {
                 tableRow.addView(textView2);
 
                 tableCompra.addView(tableRow);
+            }
+        });
 
+        calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                TableRow rowHeader1 = new TableRow(context);
+                TableRow rowHeader2 = new TableRow(context);
+                TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(
+                        TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT);
+
+                TableRow rowData1 = new TableRow(context);
+                TableRow rowData2 = new TableRow(context);
+
+                if(ej4.getListaCompras().size() > 0){
+                    ej4.calcularCompra();
+
+                    Typeface typeface = Typeface.defaultFromStyle(Typeface.BOLD);
+                    TextView ivaHeader = new TextView(context);
+                    ivaHeader.setText("IVA");
+                    ivaHeader.setTypeface(typeface);
+
+                    TextView descuentosHeader = new TextView(context);
+                    descuentosHeader.setText("DESCUENTOS");
+                    descuentosHeader.setTypeface(typeface);
+
+                    TextView totalComprasHeader = new TextView(context);
+                    totalComprasHeader.setText("TOTAL");
+                    totalComprasHeader.setTypeface(typeface);
+
+                    TextView compraMasAltaHeader = new TextView(context);
+                    compraMasAltaHeader.setText("COMPRA MAS ALTA");
+                    compraMasAltaHeader.setTypeface(typeface);
+
+                    rowHeader1.addView(ivaHeader);
+                    rowHeader1.addView(descuentosHeader);
+                    rowHeader2.addView(totalComprasHeader);
+                    rowHeader2.addView(compraMasAltaHeader);
+
+                    tableCompra.addView(rowHeader1, layoutParams);
+
+                    TextView iva = new TextView(context);
+                    iva.setText(String.valueOf(ej4.getTotalIva()));
+
+                    TextView descuentos = new TextView(context);
+                    descuentos.setText(String.valueOf(ej4.getTotalDescuentos()));
+
+                    TextView totalCompras = new TextView(context);
+                    totalCompras.setText(String.valueOf(ej4.getTotalCompras()));
+
+                    TextView compraMasAlta = new TextView(context);
+                    compraMasAlta.setText(String.valueOf(ej4.compraMasAlta()));
+
+                    rowData1.addView(iva);
+                    rowData1.addView(descuentos);
+                    rowData2.addView(totalCompras);
+                    rowData2.addView(compraMasAlta);
+
+                    tableCompra.addView(rowData1);
+
+                    tableCompra.addView(rowHeader2);
+                    tableCompra.addView(rowData2);
+                }else{
+                    Toast.makeText(context,"Debe al menos hacer una compra", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
