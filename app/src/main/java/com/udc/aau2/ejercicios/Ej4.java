@@ -1,11 +1,14 @@
 package com.udc.aau2.ejercicios;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Ej4 {
     private List<Compra> listaCompras;
+    private BigDecimal bigDecimal;
     private Double totalCompras, iva, totalIva, minDescuento, porcentajeDescuento, totalDescuentos;
 
     public Ej4() {
@@ -16,6 +19,13 @@ public class Ej4 {
         this.totalCompras = 0.0;
         this.totalIva = 0.0;
         this.totalDescuentos = 0.0;
+    }
+
+    public Double redondearDecimales(Double numero, Integer decimales){
+        bigDecimal = BigDecimal.valueOf(numero);
+        BigDecimal rounded = bigDecimal.setScale(decimales, RoundingMode.HALF_UP);
+        numero = rounded.doubleValue();
+        return numero;
     }
 
     public void agregarALista(Compra compra){
@@ -29,12 +39,16 @@ public class Ej4 {
         }
 
         this.totalIva = this.totalCompras * this.iva;
+        this.totalIva = redondearDecimales(this.totalIva, 2);
 
         if(this.totalCompras > this.minDescuento){
             this.totalDescuentos = this.totalCompras * this.porcentajeDescuento;
+            this.totalDescuentos = redondearDecimales(this.totalDescuentos, 2);
         }
 
         this.totalCompras = this.totalCompras + this.totalIva - this.totalDescuentos;
+
+        this.totalCompras = redondearDecimales(this.totalCompras, 2);
 
         return totalCompras;
     }
