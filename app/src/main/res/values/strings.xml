@@ -33,4 +33,9 @@ opciones para imprimir: Normal o Al Reves</string>
     <string name="fragEj4_input_placeholder">Ingrese valor de la compra</string>
     <string name="btnAgregarCompra">Agregar compra</string>
     <string name="titleTableCompra">Compras</string>
+    <string name="tableCompraRowNumber">#</string>
+    <string name="tableCompraValor">Valor</string>
+    <string name="tableCompraTotal">Total compras</string>
+    <string name="tableComprasIva">IVA</string>
+    <string name="tableComprasDescuento">Descuento</string>
 </resources>
