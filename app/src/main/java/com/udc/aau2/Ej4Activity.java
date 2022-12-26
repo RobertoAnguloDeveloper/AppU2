@@ -17,14 +17,18 @@ import android.widget.Toast;
 
 import com.udc.aau2.ejercicios.Compra;
 import com.udc.aau2.ejercicios.Ej4;
+import com.udc.aau2.ejercicios.Validador;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ej4Activity extends AppCompatActivity {
-    EditText compraEditText;
-    Compra compra;
-    Button agregarCompra;
-    TableLayout tableCompra;
-    Ej4 ej4;
-    Integer count;
+    private EditText compraEditText;
+    private Compra compra;
+    private Button agregarCompra;
+    private TableLayout tableCompra;
+    private Ej4 ej4;
+    private Integer count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +47,11 @@ public class Ej4Activity extends AppCompatActivity {
                 count++;
                 if(count < 5){
                     agregarCompra(view);
+                    Validador.limpiarCampos(compraEditText);
                 }else{
                     agregarCompra(view);
                     calcular(view);
+                    Validador.limpiarCampos(compraEditText);
                 }
             }
         });

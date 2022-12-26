@@ -38,4 +38,12 @@ opciones para imprimir: Normal o Al Reves</string>
     <string name="tableCompraTotal">Total compras</string>
     <string name="tableComprasIva">IVA</string>
     <string name="tableComprasDescuento">Descuento</string>
+    <string name="ej5Title">Ejercicio 5</string>
+    <string name="ej5Description">Realizar un Crud (Agregar,Eliminar,Actualizar,Mostrar Información) En Android Studio
+ Investigar ListView
+ Agregarle Color Personalizado al Activity (Investigar)</string>
+    <string name="fragEj5_input_placeholder">Ingrese el nombre del programa</string>
+    <string name="btnAgregarPrograma">Agregar Programa</string>
+    <string name="rbActualizar">Actualizar</string>
+    <string name="rbEliminar">Eliminar</string>
 </resources>

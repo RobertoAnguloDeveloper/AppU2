@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.udc.aau2.R;
 import com.udc.aau2.ejercicios.Ej1;
+import com.udc.aau2.ejercicios.Validador;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,11 +22,11 @@ import com.udc.aau2.ejercicios.Ej1;
  * create an instance of this fragment.
  */
 public class Ej1Fragment extends Fragment {
-    Button btnCalcular;
-    EditText n;
-    TextView resultado;
-    Ej1 ej1;
-    View view;
+    private Button btnCalcular;
+    private EditText n;
+    private TextView resultado;
+    private Ej1 ej1;
+    private View view;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -89,6 +90,7 @@ public class Ej1Fragment extends Fragment {
                 if(!respuesta.isEmpty()){
                     Toast.makeText(getContext(),respuesta, Toast.LENGTH_LONG).show();
                 }
+                Validador.limpiarCampos(n);
             }
         });
         return view;

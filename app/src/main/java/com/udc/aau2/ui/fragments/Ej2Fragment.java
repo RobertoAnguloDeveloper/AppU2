@@ -22,9 +22,9 @@ import com.udc.aau2.ejercicios.Ej2;
  * create an instance of this fragment.
  */
 public class Ej2Fragment extends Fragment {
-    ImageView imageView1, imageView2;
-    Button btnTirarDados;
-    Ej2 ej2;
+    private ImageView imageView1, imageView2;
+    private Button btnTirarDados;
+    private Ej2 ej2;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

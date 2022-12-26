@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.udc.aau2.ejercicios.Ej1;
 import com.udc.aau2.ui.fragments.Ej1Fragment;
 import com.udc.aau2.ui.fragments.Ej2Fragment;
 import com.udc.aau2.ui.fragments.Ej3Fragment;
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentTransaction transaction;
     Fragment homeFragment, ej1Fragment, ej2Fragment, ej3Fragment;
-    Intent intent;
+    Intent intentEj4, intentEj5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         ej1Fragment = new Ej1Fragment();
         ej2Fragment = new Ej2Fragment();
         ej3Fragment = new Ej3Fragment();
-        intent = new Intent(this, Ej4Activity.class);
+        intentEj4 = new Intent(this, Ej4Activity.class);
+        intentEj5 = new Intent(this, Ej5Activity.class);
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, homeFragment).commit();
     }
@@ -47,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnEj3: transaction.replace(R.id.fragmentFrame, ej3Fragment).commit();
                 break;
 
-            case R.id.btnEj4: startActivity(intent);
+            case R.id.btnEj4: startActivity(intentEj4);
+                break;
+
+            case R.id.btnEj5: startActivity(intentEj5);
                 break;
         }
     }
