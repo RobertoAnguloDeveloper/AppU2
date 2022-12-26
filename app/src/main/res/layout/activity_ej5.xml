@@ -44,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="10dp"
             android:text="" />
     </LinearLayout>
 
@@ -62,11 +63,11 @@
         android:textColorHint="#757575" />
 
     <Button
-        android:id="@+id/btnAgregarPrograma"
+        android:id="@+id/btnGuardarPrograma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/btnAgregarPrograma" />
+        android:text="@string/btnGuardarPrograma" />
 
     <RadioGroup
         android:id="@+id/actiones"
@@ -74,6 +75,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/rbAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbAgregar" />
 
         <RadioButton
             android:id="@+id/rbActualizar"

@@ -19,8 +19,10 @@ import com.udc.aau2.ejercicios.Compra;
 import com.udc.aau2.ejercicios.Ej4;
 import com.udc.aau2.ejercicios.Validador;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Ej4Activity extends AppCompatActivity {
     private EditText compraEditText;
@@ -72,7 +74,7 @@ public class Ej4Activity extends AppCompatActivity {
         TextView textView2 = new TextView(context);
 
         textView1.setText(String.valueOf(count));
-        textView2.setText(String.valueOf(compra.getCompra()));
+        textView2.setText("$"+Validador.separadorDeMiles(compra.getCompra()));
 
         tableRow.addView(textView1);
         tableRow.addView(textView2);
@@ -93,6 +95,16 @@ public class Ej4Activity extends AppCompatActivity {
 
         if(ej4.getListaCompras().size() > 0){
             ej4.calcularCompra();
+
+            TextView space = new TextView(context);
+            TextView space2 = new TextView(context);
+
+            TableRow rowSpace = new TableRow(context);
+
+            rowSpace.addView(space);
+            rowSpace.addView(space2);
+
+            tableCompra.addView(rowSpace);
 
             Typeface typeface = Typeface.defaultFromStyle(Typeface.BOLD);
             TextView ivaHeader = new TextView(context);
@@ -119,23 +131,30 @@ public class Ej4Activity extends AppCompatActivity {
             tableCompra.addView(rowHeader1, layoutParams);
 
             TextView iva = new TextView(context);
-            iva.setText(String.valueOf(ej4.getTotalIva()));
+            iva.setText("$"+Validador.separadorDeMiles(ej4.getTotalIva()));
 
             TextView descuentos = new TextView(context);
-            descuentos.setText(String.valueOf(ej4.getTotalDescuentos()));
+            descuentos.setText("$"+Validador.separadorDeMiles(ej4.getTotalDescuentos()));
 
             TextView totalCompras = new TextView(context);
-            totalCompras.setText(String.valueOf(ej4.getTotalCompras()));
+            totalCompras.setText("$"+Validador.separadorDeMiles(ej4.getTotalCompras()));
 
             TextView compraMasAlta = new TextView(context);
-            compraMasAlta.setText(String.valueOf(ej4.compraMasAlta()));
+            compraMasAlta.setText("$"+Validador.separadorDeMiles(ej4.compraMasAlta()));
 
             rowData1.addView(iva);
             rowData1.addView(descuentos);
             rowData2.addView(totalCompras);
             rowData2.addView(compraMasAlta);
-
             tableCompra.addView(rowData1);
+
+            TextView space3 = new TextView(context);
+            TextView space4 = new TextView(context);
+            TableRow rowSpace2 = new TableRow(context);
+            rowSpace2.addView(space3);
+            rowSpace2.addView(space4);
+
+            tableCompra.addView(rowSpace2);
 
             tableCompra.addView(rowHeader2);
             tableCompra.addView(rowData2);

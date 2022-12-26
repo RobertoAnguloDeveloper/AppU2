@@ -44,7 +44,8 @@ opciones para imprimir: Normal o Al Reves</string>
  Agregarle Color Personalizado al Activity (Investigar)</string>
     <string name="contadorProgramasLabel">Cantidad de programas: </string>
     <string name="fragEj5_input_placeholder">Ingrese el nombre del programa</string>
-    <string name="btnAgregarPrograma">Agregar Programa</string>
+    <string name="btnGuardarPrograma">Guardar</string>
+    <string name="rbAgregar">Agregar</string>
     <string name="rbActualizar">Actualizar</string>
     <string name="rbEliminar">Eliminar</string>
 </resources>
