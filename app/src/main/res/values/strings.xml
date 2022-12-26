@@ -42,6 +42,7 @@ opciones para imprimir: Normal o Al Reves</string>
     <string name="ej5Description">Realizar un Crud (Agregar,Eliminar,Actualizar,Mostrar Información) En Android Studio
  Investigar ListView
  Agregarle Color Personalizado al Activity (Investigar)</string>
+    <string name="contadorProgramasLabel">Cantidad de programas: </string>
     <string name="fragEj5_input_placeholder">Ingrese el nombre del programa</string>
     <string name="btnAgregarPrograma">Agregar Programa</string>
     <string name="rbActualizar">Actualizar</string>
