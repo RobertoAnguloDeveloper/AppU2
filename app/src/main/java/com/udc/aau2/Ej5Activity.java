@@ -40,7 +40,8 @@ public class Ej5Activity extends AppCompatActivity {
         rbEliminar = findViewById(R.id.rbEliminar);
         listaProgramas = findViewById(R.id.listaProgramas);
         programas = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, programas);
+        adapter = new ArrayAdapter<>(this, R.layout.textview_custom, programas);
+
         listaProgramas.setAdapter(adapter);
 
         contador.setText(String.valueOf(programas.size()));
@@ -48,6 +49,8 @@ public class Ej5Activity extends AppCompatActivity {
         rbAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                programa.setEnabled(true);
+                btnGuardarPrograma.setEnabled(true);
                 btnGuardarPrograma.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -64,11 +67,15 @@ public class Ej5Activity extends AppCompatActivity {
         rbActualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                programa.setEnabled(false);
+                btnGuardarPrograma.setEnabled(false);
                 listaProgramas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         String item = adapter.getItem(i);
                         programa.setText(item);
+                        programa.setEnabled(true);
+                        btnGuardarPrograma.setEnabled(true);
                         btnGuardarPrograma.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -78,6 +85,8 @@ public class Ej5Activity extends AppCompatActivity {
                                 adapter.notifyDataSetChanged();
                                 Validador.limpiarCampos(programa);
                                 contador.setText(String.valueOf(programas.size()));
+                                programa.setEnabled(false);
+                                btnGuardarPrograma.setEnabled(false);
                             }
                         });
                     }
@@ -88,6 +97,8 @@ public class Ej5Activity extends AppCompatActivity {
         rbEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                programa.setEnabled(false);
+                btnGuardarPrograma.setEnabled(false);
                 listaProgramas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

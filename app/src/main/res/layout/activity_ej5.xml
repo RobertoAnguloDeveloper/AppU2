@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".Ej5Activity">
 
 
@@ -15,7 +16,8 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:text="@string/ej5Title" />
+        android:text="@string/ej5Title"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/ej5Description"
@@ -24,6 +26,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:gravity="center_horizontal"
+        android:textColor="@color/white"
         android:text="@string/ej5Description" />
 
     <LinearLayout
@@ -37,7 +40,8 @@
             android:id="@+id/contadorProgramasLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/contadorProgramasLabel" />
+            android:text="@string/contadorProgramasLabel"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/contadorProgramas"
@@ -45,7 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:text="" />
+            android:text=""
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <EditText
@@ -60,13 +65,15 @@
         android:hint="@string/fragEj5_input_placeholder"
         android:inputType="text"
         android:minHeight="48dp"
-        android:textColorHint="#757575" />
+        android:textColorHint="#757575"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnGuardarPrograma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:shadowColor="@color/white"
         android:text="@string/btnGuardarPrograma" />
 
     <RadioGroup
@@ -80,24 +87,28 @@
             android:id="@+id/rbAgregar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rbAgregar" />
+            android:text="@string/rbAgregar"
+            android:textColor="@color/white"/>
 
         <RadioButton
             android:id="@+id/rbActualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rbActualizar" />
+            android:text="@string/rbActualizar"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/rbEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rbEliminar" />
+            android:text="@string/rbEliminar"
+            android:textColor="@color/white" />
     </RadioGroup>
 
     <ListView
         android:id="@+id/listaProgramas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textColor="@color/white" />
 </LinearLayout>
