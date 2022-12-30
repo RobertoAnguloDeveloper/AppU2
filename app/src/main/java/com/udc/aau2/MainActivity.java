@@ -6,12 +6,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.widget.Toast;
 
 import com.udc.aau2.ui.fragments.Ej1Fragment;
 import com.udc.aau2.ui.fragments.Ej2Fragment;
 import com.udc.aau2.ui.fragments.Ej3Fragment;
 import com.udc.aau2.ui.fragments.HomeFragment;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,13 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        setTheme(R.style.splash_screen_theme);
-        setTheme(R.style.Theme_AAU2);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

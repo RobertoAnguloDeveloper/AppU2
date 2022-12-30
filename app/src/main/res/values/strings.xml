@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">RVLR AAU2</string>
+    <string name="cipa_name">RVLR SOFT</string>
+    <string name="cipa_info">ROBERTO ANGULO VINCENT ROLONG LUIFER VILLA RUBEN HERNANDEZ MURIEL DIAZ
+    </string>
     <string name="titulo"></string>
     <string name="btnEj1">Ejercicio 1</string>
     <string name="btnEj2">Ejercicio 2</string>
@@ -48,4 +51,5 @@ opciones para imprimir: Normal o Al Reves</string>
     <string name="rbAgregar">Agregar</string>
     <string name="rbActualizar">Actualizar</string>
     <string name="rbEliminar">Eliminar</string>
+    <string name="udc_logo">UDC Logo</string>
 </resources>

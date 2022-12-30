@@ -13,7 +13,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="splash_screen_theme" parent="Theme.AAU2">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
+
+    <style name="splash_theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
     </style>
 </resources>
