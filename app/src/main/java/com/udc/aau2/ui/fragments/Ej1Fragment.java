@@ -82,15 +82,17 @@ public class Ej1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ej1 =  new Ej1();
-                Integer num = Integer.parseInt(String.valueOf(n.getText()));
-                Integer result = ej1.calcularCubo(num);
-                resultado.setText(result+"");
-                String respuesta = ej1.eresAfortunado(result);
+                if(!n.getText().toString().isEmpty()){
+                    Integer num = Integer.parseInt(String.valueOf(n.getText()));
+                    Integer result = ej1.calcularCubo(num);
+                    resultado.setText(result+"");
+                    String respuesta = ej1.eresAfortunado(result);
 
-                if(!respuesta.isEmpty()){
-                    Toast.makeText(getContext(),respuesta, Toast.LENGTH_LONG).show();
+                    if(!respuesta.isEmpty()){
+                        Toast.makeText(getContext(),respuesta, Toast.LENGTH_LONG).show();
+                    }
+                    Validador.limpiarCampos(n);
                 }
-                Validador.limpiarCampos(n);
             }
         });
         return view;
