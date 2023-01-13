@@ -20,9 +20,9 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    FragmentTransaction transaction;
-    Fragment homeFragment, ej1Fragment, ej2Fragment, ej3Fragment;
-    Intent intentEj4, intentEj5;
+    private FragmentTransaction transaction;
+    private Fragment homeFragment, ej1Fragment, ej2Fragment, ej3Fragment;
+    private Intent intentEj4, intentEj5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

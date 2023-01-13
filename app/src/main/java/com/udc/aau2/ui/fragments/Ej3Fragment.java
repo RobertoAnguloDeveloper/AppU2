@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.udc.aau2.R;
-import com.udc.aau2.ejercicios.Ej3;
-import com.udc.aau2.ejercicios.Validador;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +22,6 @@ public class Ej3Fragment extends Fragment {
     private Button btnNormal, btnAlreves;
     private EditText cadena;
     private TextView resultado;
-    private Ej3 ej3;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
